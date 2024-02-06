@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folio.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-qpP+99cDzEgYecIJFJADiwravI2o8zitqNsnP53SmUFzpx8mAN5HLeQO5kfZJTKXKuFDfclCt0VQqBJp+H+RAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Global Reset */
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(bg1.png);
+            background-attachment: fixed;
+            color: #fff;
+            line-height: 1.6;
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: #333;
+            padding: 20px;
+            opacity: 0.85;
+            font-size: 22px;
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: inherit;
+            text-decoration: none;
+            padding: 0 15px;
+        }
+
+        .navbar a:hover {
+            color: #a88635;
+        }
+
+        /* Main Container Styles */
+        .container {
+            padding: 20px;
+        }
+
+        /* Introduction Styles */
+        .intro {
+            background-color: rgba(5, 3, 0, 0.6);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .intro img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Section Heading Styles */
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        /* Content Paragraph Styles */
+        p {
+            margin-bottom: 20px;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: #333;
+            padding: 20px;
+            color: #fff;
+            text-align: center;
+        }
+
+        /* Footer Social Icon Styles */
+        .footer i {
+            margin: 0 10px;
+            font-size: 24px;
+            color: #a88635;
+        }
+
+        /* Media Query for Smaller Devices */
+        @media (max-width: 768px) {
+            /* Navbar Styles */
+            .navbar {
+                padding: 10px;
+                font-size: 18px;
+            }
+
+            /* Introduction Styles */
+            .intro {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="navbar" id="navbar">
+    <a href="#" onclick="toggleMode()" id="modeToggle">Light Mode</a>
+    <a href="#blogdiv">Blogs</a>
+    <a href="#skills">Achievements</a>
+    <a href="#education">Skills</a>
+    <a href="#bigGuy">Education</a>
+    <a href="#">About</a>
+</div>
+
+<div class="container">
+    <div class="intro">
+        <div class="pfp_Div" id="pfp">
+            <img src="me3.jpeg" alt="Profile Pic" style="max-width: 100%; height: auto;">
+            <hr>
+            <h1>I am Anushka Sharma</h1>
+            <p>
+                At 18, a student at IIIT Hyderabad, I'm deeply passionate about photography, sketching, exploring new horizons through extensive travel, as well as delving into the realms of astrophysics and quantum mechanics. This blend of artistic expression and scientific curiosity shapes both my personal and academic journey at IIIT Hyderabad.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <p>Follow me on social media:</p>
+    <a href="https://www.facebook.com/AnushkaSharma.iiith"><i class="fab fa-facebook-square"></i></a>
+    <a href="https://github.com/anushkasharma2005"><i class="fab fa-github"></i></a>
+    <a href="mailto:anushka.sharma@research.iiit.ac.in"><i class="fas fa-envelope"></i></a>
+</div>
+
+<script>
+    function toggleMode() {
+        var modeToggle = document.getElementById('modeToggle');
+        var currentMode = modeToggle.innerHTML;
+
+        if (currentMode === "Light Mode") {
+            // Change to Dark Mode
+            document.body.style.backgroundColor = '#333';
+            modeToggle.innerHTML = "Dark Mode";
+        } else {
+            // Change to Light Mode
+            document.body.style.backgroundColor = 'whitesmoke';
+            modeToggle.innerHTML = "Light Mode";
+        }
+    }
+</script>
+</body>
+</html>

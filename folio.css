@@ -1,0 +1,70 @@
+
+*{
+   padding: 0px;
+   margin: 0px;
+}
+.Main_Div{
+   height:100%;
+   width:100%;
+   background-color: black;
+}
+.navigation_bar{
+   height: auto;
+   width: 100%;
+   float: left;
+}
+
+.navbar {
+   background-color: #333;
+   height: 40px;
+   width: 100%;
+   padding: 50px 0px;
+}
+
+/* Centering the navigation links */
+.navbar ul {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   text-align: center;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin-right: 30px;
+    font-size: 20px;
+}
+
+.a2{
+   margin-left:-50px;
+
+}
+/* Styling the links */
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    position: relative; /* Relative positioning for the border */
+}
+
+/* Creating a bottom border for the links */
+.navbar ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0; /* Initially, the border has zero width */
+    height: 2px; /* Height of the border */
+    background-color: white; /* Color of the border */
+    transition: width 0.3s ease; /* Transition effect */
+}
+
+/* Increasing the width of the border on hover */
+.navbar ul li a:hover::after {
+    width: 100%; /* Width of the border on hover */
+}
+
+section {
+   padding: 50px 0;
+   background-color: #f9f9f9;
+   text-align: center;
+}
