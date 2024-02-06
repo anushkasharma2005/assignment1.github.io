@@ -1,0 +1,563 @@
+
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Folio.</title>
+   <script src="https://kit.fontawesome.com/4b0f04776b.js" crossorigin="anonymous"></script>
+   <style>
+   *{
+      padding: 0px;
+      margin:0px;
+   }
+   body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      z-index: -1;
+      padding: 0;
+      background-image: url(bg1.png);
+      background-attachment: fixed;
+      position:static;
+      
+   }
+
+   .navbar {
+      background-color: #333; /* Dark mode background */
+      padding: 20px;
+      opacity: 0.85  ;
+      font-size: 22px;
+      padding-right: 50px;
+      height: 50px;
+      position: -webkit-sticky;
+      color: #fff; /* Dark mode text color */
+      overflow: hidden;
+      text-align: right; /* Align everything to the right */
+      transition: background-color 0.4s ease; /* Transition background color */
+   }
+
+   .navbar a {
+      float: right; /* Float the links to the right */
+      display: block;
+      color: inherit;
+      border-bottom: 0;
+      text-align: center;
+      font-family: Bahnschrift;
+      padding: 14px 27px;
+      text-decoration: none;
+      transition: color 0.7s ease; /* Transition text color */
+   }
+
+   .navbar a:hover {
+      color: #a88635; /* Change text color to #63cf7a on hover */
+   }
+
+   /* Light mode styles */
+   .light-mode {
+      background-color: #f4f4f4;
+      color: #333;
+   }
+
+   .light-mode .navbar {
+      background-color: #f4f4f4 !important;
+      color: #333 !important;
+   }
+
+   .light-mode .navbar a:hover {
+      color:  #a88635 !important;
+   }
+
+   .intro{
+         height: 1100px;
+         background-color:rgba( 5, 3, 0, 0.6);
+         width: 100%;
+   }
+   .pfp_Div{
+         float: right;
+         height: 60%;
+         margin-top: 10%;
+         margin-right: 10%;
+         opacity: 1;
+         background-color:rgba(51, 51, 51, 0.6);
+         width: 80%;
+         transition: background-color 0.4s ease; /* Transition text color */
+
+   }
+
+   .BigDiv{
+         height: 3860px;
+         margin-top: 0px;
+         margin-right: 15%;
+         opacity: 1;
+         background-color:#333;
+         width: 100%;
+         transition: background-color 0.4s ease; /* Transition text color */
+   }
+   .educationDiv{
+         height:800px;
+         width:80%;
+         float: right;
+         margin-top:8%;
+         margin-right:10%;
+         border: 1px #a88635 solid;
+
+   }
+   .EduIcon{
+         color: #a88635;
+         font-size: 120px;
+         margin-left: 14%;
+         margin-top:20%;
+         float: left;
+
+   }
+   .Skills_Main{
+      height: 300px;
+      width: 100%;
+      float: right;
+      display: flex;
+      background-color:transparent;
+      background-color:transparent;
+
+   }
+   .Skills_Main> div{
+      display: inline-flex;
+      padding-left:100px;
+      color: white;
+      float: right;
+      text-align: center;
+      line-height: 75px;
+      font-size: 30px;
+   }
+
+    .flex1{
+      flex: 20%;
+      height: 100%;
+      float: left;
+      margin-left: 9.9%;
+      border-left: 1px #a88635 solid;
+      border-bottom:1px #a88635 solid;
+      align-self:right;
+   }
+   .flex2{
+      flex: 20%;
+      float: left;
+      border-left: 1px #a88635 solid;
+      border-bottom:1px #a88635 solid;
+      height: 100%;
+   }
+   .flex3{
+      flex: 20%;
+      height: 100%;
+      float: left;
+      border-left: 1px #a88635 solid;
+      border-bottom:1px #a88635 solid;
+   }
+   .flex4{
+      flex: 20%;
+      height: 100%;
+      margin-right:10%;
+      float: right;
+      border-right: 1px #a88635 solid;
+      border-bottom:1px #a88635 solid;
+      border-left: 1px #a88635 solid;
+   } 
+
+   .CamIcon{
+      float: left;
+      margin-top: 38%;
+      margin-left: 20%;
+      color: #a88635;
+      font-size: 60px;
+   }
+   .BallIcon{
+      float: left;
+      margin-top: 38%;
+      margin-left: 20%;
+      color: #a88635;
+      font-size: 60px;
+   }
+   .PaletteIcon{
+      float: left;
+      margin-top: 38%;
+      margin-left: 20%;
+      color: #a88635;
+      font-size: 60px;
+   }
+
+   .AchievementDiv{
+      height:800px;
+      width:80%;
+      float: right;
+      margin-right:10%;
+      border: 1px #a88635 solid;
+
+}
+   .AchievementIcon{
+         color: #a88635;
+         font-size: 120px;
+         margin-right: 14%;
+         margin-top:22%;
+         float: right;
+
+   }
+
+   .pseudofooter{
+      height: 700px;
+      width: 100%;
+      background-color:transparent;
+      float: left;
+   }
+   .facebook{
+      float: left;
+      color: #a88635;
+      margin-top: 1%;
+      margin-left: 18%;
+      font-size: 40px;
+   }
+   .facebook:hover{
+         opacity:0.6;
+         transition-duration:0.4s;
+   }
+   .github{
+      float: left;
+      color: #a88635;
+      margin-left: 2%;
+      margin-top: 1%;
+      font-size: 40px;
+   }
+   .github:hover{
+      opacity:0.6;
+      transition-duration:0.4s;
+   }
+   .email{
+      float: left;
+      color: #a88635;
+      margin-left: 2%;
+      margin-top: 1%;
+      font-size: 40px;
+   }
+   .email:hover{
+      opacity:0.6;
+      transition-duration:0.4s;
+   }
+
+   .blogDiv{
+      height:900px;
+      width:100%;
+      float: right;
+      margin-top:10%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image:url(blogBack5.jpg);
+      background-attachment: fixed;
+
+   }
+   .blogOpac{
+      height: 900px;
+      background-color:rgba(0,0,0,0.6);
+      float: right;
+      width: 100%;
+   }
+
+   .quickLinks{
+      width: 40%;
+      height: 300px;
+      float: right;
+      margin-top: -8%;
+      margin-right: 10%;
+      background-color: transparent;
+   }
+   .qlinks{
+      color: whitesmoke;
+      font-family:Bahnschrift;
+      font-size: 20px;
+      transition-duration:1s;
+      text-decoration: none;
+      margin-left: 40%;
+   }
+   .qlinks:hover{
+      color: #a88635;
+      transition: 0.5s;
+   }
+
+   .h1_15{
+      color: whitesmoke ;
+      font-size:30px;
+      margin-top:2%;
+      font-family:Bahnschrift;
+      margin-left: 40%;
+   }
+   .blog_div1{
+      width:25%;
+      margin-top:5%;
+      margin-left:19%;
+      height:45%;
+      float: left;
+      background-color:rgba(51, 51, 51, 0.6);
+      border:1px #a88635 solid;
+   }
+   .blog_div2{
+      width:25%;
+      margin-top:5%;
+      margin-left:10%;
+      height:45%;
+      float: left;
+      background-color:rgba(51, 51, 51, 0.6);
+      border:1px #a88635 solid;  
+   }
+
+   .readMore{
+      color:#a88635; 
+      width:30%;  
+      padding-top:7px; 
+      margin-top:13%; 
+      height: 7%;
+      float: left;
+      border:1px  #a88635 solid ;
+      border-radius:30px; 
+      background-color:transparent; 
+      margin-left:34%; 
+      text-align:center; 
+      font-size:15px;
+      text-decoration: none;
+   }
+
+   .readMore:hover{
+      transition-duration:0.7s;
+      color: black;
+      background-color:#a88635; 
+   }
+   </style>
+   </head>
+   <body>
+      <!-- color: #bb953f-->
+      <!-- color:#f2b31f; -->
+   <div class="navbar" id="navbar">
+   <a href="#" onclick="toggleMode()" id="modeToggle">Light Mode</a>
+   <a href="#blogdiv">Blogs</a>
+   <a href="#skills">Achievements</a>
+   <a href="#education">Skills</a>
+   <a href="#bigGuy">Education</a>
+   <a href="#">About</a>
+   <!-- <a href="#" class="active">Home</a> -->
+   </div>
+   <div class="intro">
+      <div class="pfp_Div" id="pfp">
+         <img src="me3.jpeg" alt="Profile Pic" style="height:55%; width: 25%; margin-top:10%; margin-left:5%;">
+         <hr style="color:rgba(255,255,255,0.8); width: 0.001%; height:80%; float:right; margin-right:65%; margin-top:5%; transition:color 0.4s ease; border-radius:50px;" id="rule">
+         <h1 style="color: rgba(255,255,255,0.8); float:right; font-size:350%; font-family:Snell Roundhand, cursive; margin-right:  20%; margin-top :-28%; transition:color 0.4s ease;" id="name" ><span style="font-size: 30px; ">I am  </span> <span style="color:rgba(168, 134, 53, 0.9);">Anushka Sharma</span></h1>
+
+         <p style="color: rgba(255,255,255,0.8); font-size:19px; float:right; margin-right :8%; margin-top:-22%; transition:color 0.4s ease; text-align:center; font-family:Bahnschrift;" id="Aboutpara"> 
+            At 18, a student at IIIT Hyderabad,<br> I"m deeply passionate about photography, sketching,<br> exploring new horizons through extensive travel,<br> as well as delving into the realms of astrophysics and quantum mechanics. <br>This blend of artistic expression and scientific curiosity shapes both<br> my personal and academic journey at IIIT Hyderabad.
+
+         </p>
+      </div>
+   </div>
+
+   <div class="BigDiv" id="bigGuy">
+
+
+      <div class="educationDiv" id="edu" >
+         <!-- <span class="EduIcon"><i class="fa-solid fa-book"></i></span> -->
+         <span class="EduIcon"><i class="fa-solid fa-graduation-cap"></i></span>
+         <hr style="color: rgba(168, 134, 53, 0.6); width:0px; height:80%; float:right; margin-right:65%; margin-top:5%; transition:color 0.4s ease; border-radius:50px;" id="rule">
+         <h1 style="color: rgba(255,255,255,0.7); float:right; font-size:500%; font-family:Snell Roundhand, cursive; margin-right :23%;
+         margin-top:-31%; transition:color 0.4s ease;" id="education">Education</h1>
+         <p style="color: rgba(255,255,255,0.8); font-size:19px; float:right; margin-right :11%; margin-top:-23%; transition:color 0.4s ease;text-align:center; font-family:Bahnschrift;" id="Edupara">
+            My educational journey has spanned various states in India,<br> from the dynamic landscapes of South India<br> to the cultural tapestry of Lucknow.<br> Currently enrolled at IIIT Hyderabad,<br> I"m pursuing a B.Tech in Computer Science and Engineering while <br> delving into the realm of Natural Sciences,<br> combining my fascination for technology with a <br>keen interest in the natural world.
+         </p>
+      </div>
+
+
+
+   <div class="Skills_Main">
+         <div class="flex1"><h1 style="color: rgba(255,255,255,0.7); float:left; font-size:270%; font-family:Snell Roundhand, cursive; margin-left :2%; margin-top:45%; transition:color 0.4s ease;" id="skills">Skills</h1></div>
+         <div class="flex2">
+            <span class="CamIcon"><i class="fa-solid fa-camera"></i></span>       
+            <span style="font-family:Bahnschrift; color:rgba(255,255,255,0.6); float:right; font-size:10px; margin-top: 60%; margin-left:-40%;" id="Cam"><h1>Photography</h1></span> 
+         </div>
+         <div class="flex3">
+            <span class="BallIcon"><i class="fa-solid fa-baseball"></i></span>
+            <span style="font-family:Bahnschrift; color:rgba(255,255,255,0.6);float:right; font-size:10px; margin-top:60%; margin-left:-29%;" id="Ball"><h1>Cricket</h1></span>
+         </div>
+         <div class="flex4">
+            <span class="PaletteIcon"><i class="fa-solid fa-palette"></i></span>
+            <span style="font-family:Bahnschrift; color:rgba(255,255,255,0.6); float:right;font-size:10px; margin-top:60%; margin-left:-34%;" id="Palette"><h1>Sketching</h1></span>
+         </div>
+
+   </div>
+
+   <div class="AchievementDiv" id="achiv" >
+      <span class="AchievementIcon"><i class="fa-solid fa-award"></i></span>
+      <hr style="color: rgba(168, 134, 53, 0.6); width:0px; height:80%; float:left; margin-left:65%; margin-top:5%; transition:color 0.4s ease; border-radius:50px;" id="rule">
+
+      <h1 style="color: rgba(255,255,255,0.7); float:left; font-size:500%; font-family:Snell Roundhand, cursive; margin-left :17%;
+      margin-top:-31%; transition:color 0.4s ease;" id="achievement">Achievements</h1>
+      <p style="color: rgba(255,255,255,0.8); font-size:19px; float:left; margin-left :7%; margin-top:-23%; transition:color 0.4s ease;text-align:center; font-family:Bahnschrift;" id="Achpara">
+         My experiences beyond my immediate surroundings are still unfolding,<br> I"ve found joy in academics, <br>Achieving 98.4% in my 10th CBSE exams,<br>earning the distinction of being a blue blazer holder at my school,<br> and successfully clearing exams <br>such as JEE Mains, IAT,UGEE and JEE Advanced (I"ll keep my rank a secret)<br> have been a few accomplishments.
+      </p>
+
+   </div>
+
+   <div class="blogDiv" id="blogdiv">
+      <div class="blogOpac">
+         <h1 style="color:rgba(255,255,255,0.7); font-size:50px; margin-left:31%; float:left; margin-top:8%;">Interested in <span style=" color:rgba(168, 134, 53, 0.7);"> Reading</span> blogs?</h1>
+         <div class="blog_div1" id="blog1">
+            <h2 style="color:rgba(255,255,255,0.8); margin-left:6%; margin-top:25%;" id="blog1txt">The Mystery of Dark Matter: What We Know So Far</h2>
+            <a href="blog1_responsive.html" target=”_blank” class="readMore">Read More</a>
+         </div>
+         <div class="blog_div2" id="blog2">
+            <h2 style="color:rgba(255,255,255,0.8); margin-left:11%; margin-top:25%;" id="blog2txt">Quantum Entanglement: Spooky Action at a Distance and Its Applications</h2>
+            <a href="blog2_responsive.html" target=”_blank” class="readMore" style="margin-top: 7%;">Read More</a>
+         </div>
+
+      </div>
+      
+
+   </div>
+
+
+
+   <div class="pseudofooter">
+      <h1 style="font-size:40px; font-family:Bahnschrift; color:#fff; margin-top:15%; margin-left:12%;" id="footerTxt1">
+         <span style="color: #a88635;">Wanna</span> get in touch ?
+      </h1>
+      <h3 style="color: white; margin-left:18%; margin-top:1%;" id="cv">Also Checkout My <a href="CV.pdf" style=" color:white;" id="cvtxt">CV</a></h3>
+      <!-- <hr style="color: rgba(168, 134, 53, 0.6); width:0px; height:50%; float:left; margin-left:42%; margin-top:-10%; transition:color 0.4s ease; border-radius:50px;" id="rule"> -->
+
+      <p style="color: #fff; font-size:30px; font-family:Bahnschrift; float:right; margin-right:72.5%; margin-top:3%;" id="footerTxt2">Ping me on</p>
+      <a href="https://www.facebook.com/AnushkaSharma.iiith"><span class="facebook"><i class="fa-brands fa-square-facebook"></i></span></a>
+      <a href=https://github.com/anushkasharma2005"><span class="github"><i class="fa-brands fa-square-github"></i></span></a>
+      <a href="mailto:anushka.sharma@research.iiit.ac.in"><span class="email"><i class="fa-solid fa-envelope"></i></span></a>
+
+
+      <div class="quickLinks" >
+         <h1 class="h1_15" id="quicklinks">Quick Links</h1><br>
+         <a href="#" class="qlinks" id="link1">About</a><br><br>
+         <a href="#bigGuy" class="qlinks" id="link2">Education</a><br><br>
+         <a href="#education" class="qlinks" id="link3">Skills</a><br><br>
+         <a href="#skills" class="qlinks" id="link4">Achievements</a><br><br>
+         <a href="#blogdiv" class="qlinks" id="link5">Blogs</a><br><br>
+
+      </div>
+   </div>
+
+   </div>
+
+   <script>
+
+   function toggleMode() {
+
+      var navbar = document.getElementById("navbar");
+      var pfpDiv = document.getElementById("pfp");
+      var line= document.getElementById("rule");
+      var name= document.getElementById("name");
+      var eduTxt= document.getElementById("education");
+      var BigGuy = document.getElementById("bigGuy");
+      var Aboutpara= document.getElementById("Aboutpara");
+      var Edupara= document.getElementById("Edupara");
+      var SkillsTxt = document.getElementById("skills");
+      var SkillsCam= document.getElementById("Cam");
+      var SkillsBall= document.getElementById("Ball");
+      var SkillsPalette= document.getElementById("Palette");
+      var AchTxt= document.getElementById("achievement")
+      var Achpara= document.getElementById("Achpara")
+      var footerTxt1= document.getElementById("footerTxt1")
+      var footerTxt2= document.getElementById("footerTxt2")
+      var blog1= document.getElementById("blog1");
+      var blog2= document.getElementById("blog2");
+      var blog1txt= document.getElementById("blog1txt");
+      var blog2txt= document.getElementById("blog2txt");
+      var quicklinks = document.getElementById("quicklinks");
+      var link1 = document.getElementById("link1");
+      var link2 = document.getElementById("link2");
+      var link3 = document.getElementById("link3");
+      var link4 = document.getElementById("link4");
+      var link5 = document.getElementById("link5");
+      var cv= document.getElementById("cv");
+      var cvtxt= document.getElementById("cvtxt");
+
+
+      navbar.classList.toggle("light-mode");
+      var modeToggle = document.getElementById("modeToggle");
+
+
+      if (modeToggle.innerHTML === "Light Mode") {
+         modeToggle.innerHTML = "Dark Mode";
+         document.body.style.backgroundColor = "whitesmoke"; 
+         pfpDiv.style.backgroundColor= "rgba(255,255,255,0.6)";
+         line.style.color="rgba(51,51,51,0.6)";
+         name.style.color= "rgba(0,0,0,0.6)"
+         document.getElementById("edu").style.backgroundColor="#fff"
+         document.getElementById("achiv").style.backgroundColor="#fff"
+         eduTxt.style.color="rgba(0,0,0,0.6)";
+         BigGuy.style.backgroundColor="#fff"
+         Aboutpara.style.color="rgba(0,0,0,0.6)";
+         Edupara.style.color="rgba(0,0,0,0.6)";
+         SkillsTxt.style.color="rgba(0,0,0,0.6)";
+         SkillsCam.style.color="rgba(0,0,0,0.6)";
+         SkillsBall.style.color="rgba(0,0,0,0.6)";
+         SkillsPalette.style.color="rgba(0,0,0,0.6)";
+         AchTxt.style.color="rgba(0,0,0,0.6)";
+         Achpara.style.color="rgba(0,0,0,0.6)";
+         Achpara.style.color="rgba(0,0,0,0.6)";
+         footerTxt1.style.color="rgba(0,0,0,0.6)";
+         footerTxt2.style.color="rgba(0,0,0,0.6)";
+         blog1.style.backgroundColor= "rgba(255,255,255,0.9)";
+         blog2.style.backgroundColor= "rgba(255,255,255,0.9)";
+         blog1txt.style.color="rgba(0,0,0,0.6)";
+         blog2txt.style.color="rgba(0,0,0,0.6)";
+         quicklinks.style.color="rgba(0,0,0,0.6)";
+         link1.style.color="rgba(0,0,0,0.6)";
+         link2.style.color="rgba(0,0,0,0.6)";
+         link3.style.color="rgba(0,0,0,0.6)";
+         link4.style.color="rgba(0,0,0,0.6)";
+         link5.style.color="rgba(0,0,0,0.6)";
+         cv.style.color="rgba(0,0,0,0.6)";
+         cvtxt.style.color="rgba(0,0,0,0.6)";
+
+         
+
+      } else {
+         modeToggle.innerHTML = "Light Mode";
+         document.body.style.backgroundColor = "#333"; 
+         pfpDiv.style.backgroundColor= "rgba(51, 51, 51, 0.6)";
+         line.style.color="rgba(255,255,255,0.6)";
+         name.style.color="rgba(255,255,255,0.8)";
+         edu.style.backgroundColor="#333"
+         document.getElementById("edu").style.backgroundColor="#333"
+         document.getElementById("achiv").style.backgroundColor="#333"
+         eduTxt.style.color="rgba(255,255,255,0.7)";
+         BigGuy.style.backgroundColor="#333"
+         Aboutpara.style.color="rgba(255,255,255,0.8)";
+         Edupara.style.color="rgba(255,255,255,0.8)";
+         SkillsTxt.style.color="rgba(255,255,255,0.8)";
+         SkillsCam.style.color="rgba(255,255,255,0.8)";
+         SkillsBall.style.color="rgba(255,255,255,0.8)";
+         SkillsPalette.style.color="rgba(255,255,255,0.8)";
+         AchTxt.style.color="rgba(255,255,255,0.8)";
+         Achpara.style.color="rgba(255,255,255,0.8)";
+         footerTxt1.style.color="rgba(255,255,255,0.8)";
+         footerTxt2.style.color="rgba(255,255,255,0.8)";
+         blog1.style.backgroundColor= "rgba(51, 51, 51, 0.6)";
+         blog2.style.backgroundColor= "rgba(51, 51, 51, 0.6)";
+         blog1txt.style.color="rgba(255,255,255,0.8)";
+         blog2txt.style.color="rgba(255,255,255,0.8)";
+         quicklinks.style.color="rgba(255,255,255,0.8)";
+         link1.style.color="rgba(255,255,255,0.8)";
+         link2.style.color="rgba(255,255,255,0.8)";
+         link3.style.color="rgba(255,255,255,0.8)";
+         link4.style.color="rgba(255,255,255,0.8)";
+         link5.style.color="rgba(255,255,255,0.8)";
+         cv.style.color="rgba(255,255,255,0.8)";
+         cvtxt.style.color="rgba(255,255,255,0.8)";
+
+
+      }
+
+
+   }
+   </script>
+
+   </body>
+   </html>
